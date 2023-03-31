@@ -30,7 +30,6 @@ const FormikContainer = ({
               )}
             </div>
           ))}
-          
          <SubmitButton submitText={submitBtnText}/>
         </Form>
       )}

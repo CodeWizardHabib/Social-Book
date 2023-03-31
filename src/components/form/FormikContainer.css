@@ -1,7 +1,4 @@
-.sign-up{
+.sign-up, .sign-in{
     text-align: center;
 }
-.sign-up > input{
-    width: 60%;
-    display: inline-block;
-}
+

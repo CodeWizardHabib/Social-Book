@@ -3,3 +3,6 @@ export const userInputDetails={
      email:"",
      password:"",
 }
+export const userSignInFields={
+    email:"",
+    password:""}

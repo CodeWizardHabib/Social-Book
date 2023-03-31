@@ -1,12 +1,17 @@
 import React from "react";
-import SignUp from "./pages/SignUp/SignUp";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SignIn from "./pages/SignIn/SignIn";
+import { UserContextProvider } from "./context/UserContext";
 export default function App() {
+
   return (
+    <UserContextProvider>
     <div>
       <ToastContainer autoClose={1000} />
-      <SignUp />
+      {/* <SignUp /> */}
+      <SignIn />
     </div>
+    </UserContextProvider>
   );
 }

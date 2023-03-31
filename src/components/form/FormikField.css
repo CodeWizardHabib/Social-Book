@@ -1,4 +1,4 @@
-.sign-up-field{
+.sign-up-field, .sign-in-field{
     width: 400px;
     padding: 10px;
     display: block;

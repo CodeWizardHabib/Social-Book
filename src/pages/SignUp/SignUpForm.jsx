@@ -8,15 +8,16 @@ import getLocalStorage from "../../utils/getFromLocalStorage";
 import { toast } from "react-toastify";
 import userExist from "../../utils/isUserExistWithEmail";
 import SignUpFields from "./SignUpFields";
+import { v4 as uuidv4 } from 'uuid';
 export default function SignUpForm() {
   const handleSubmit = (values, { resetForm }) => {
     const users = JSON.parse(getLocalStorage("users"));
     if (users) {
       userExist(values.email, users)
         ? toast.warn("user already exist with email")
-        : setLocalStorage("users", JSON.stringify([...users, { ...values }]));
+        : setLocalStorage("users", JSON.stringify([...users, { ...values,id: uuidv4()}]));
     } else {
-      setLocalStorage("users", JSON.stringify([{ ...values }]));
+      setLocalStorage("users", JSON.stringify([{ ...values,id: uuidv4() }]));
       toast.success("You Signed Up successfully!");
     }
     resetForm();
