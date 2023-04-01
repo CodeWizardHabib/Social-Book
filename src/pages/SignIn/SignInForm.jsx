@@ -8,7 +8,9 @@ import userExist from "../../utils/isUserExistWithEmail";
 import SignInFields from "./SignInFields";
 import validUser from "../../middlewares/validUser";
 import { userContext } from "../../context/UserContext";
+import { useNavigate } from "react-router-dom";
 export default function SignInForm() {
+  const navigate=useNavigate();
     
   const { setUser } = useContext(userContext);
 
@@ -22,6 +24,7 @@ export default function SignInForm() {
       }
       setUser(user)
       toast.success("signed in");
+      navigate("/posts")
     } else {
       toast.warn("Please First Signed Up!");
     }

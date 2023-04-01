@@ -8,17 +8,26 @@ import getLocalStorage from "../../utils/getFromLocalStorage";
 import { toast } from "react-toastify";
 import userExist from "../../utils/isUserExistWithEmail";
 import SignUpFields from "./SignUpFields";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 export default function SignUpForm() {
+  const navigate = useNavigate()
   const handleSubmit = (values, { resetForm }) => {
     const users = JSON.parse(getLocalStorage("users"));
     if (users) {
       userExist(values.email, users)
         ? toast.warn("user already exist with email")
-        : setLocalStorage("users", JSON.stringify([...users, { ...values,id: uuidv4()}]));
+        : setLocalStorage(
+            "users",
+            JSON.stringify([...users, { ...values, userId: uuidv4() }])
+          );
     } else {
-      setLocalStorage("users", JSON.stringify([{ ...values,id: uuidv4() }]));
+      setLocalStorage(
+        "users",
+        JSON.stringify([{ ...values, userId: uuidv4() }])
+      );
       toast.success("You Signed Up successfully!");
+      navigate('/signIn')
     }
     resetForm();
     // handle form submission

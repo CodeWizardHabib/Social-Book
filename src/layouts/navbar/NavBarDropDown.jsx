@@ -4,6 +4,7 @@ import { userContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 export default function NavBarDropDown() {
+
   const { user, setUser } = useContext(userContext);
   const logout=()=>{
     toast.success('user logged out');
