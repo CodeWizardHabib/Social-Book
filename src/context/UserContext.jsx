@@ -6,7 +6,11 @@ export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState("");
 
   const handleUpdate = (logInUser) => {
-    setUser({...logInUser});
+    if (logInUser === "") {
+      setUser(logInUser);
+    } else {
+      setUser({ ...logInUser });
+    }
   };
 
   return (
