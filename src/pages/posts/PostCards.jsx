@@ -23,7 +23,7 @@ export default function PostCards({ data, user, editPost, deletePost }) {
                   deletePost={deletePost}
                 />
               )}
-              <PostComments postId={id}/>
+              {user && <PostComments postId={id} user={user}/>}
             </div>
           );
         })}
