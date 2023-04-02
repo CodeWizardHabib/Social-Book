@@ -84,9 +84,28 @@
 .no-button-modal:hover{
   background-color: #133b68;
 }
-.yes-button-modal:hover{
+.yes-button-modal:hover,.edit-comment-btn:hover{
   background-color: #348584;
 }
 .confirm-modal-icons{
  padding-top: 15px;
+}
+.edit-comment-heading{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.edit-comment-input{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.edit-comment-btn{
+  padding: 10px 30px;
+  display: block;
+  margin: 0 auto;
+  background-color: #133b68;
+  color: #fff;
+  border: none;
 }
