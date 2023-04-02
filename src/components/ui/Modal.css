@@ -42,12 +42,51 @@
     color: white;
     background-color: #159895;
     border: none;
+    padding: 20px;
     cursor: pointer;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
 }
 
 .floating-button:hover {
     background-color: #002B5B;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.7);
+}
+.handle-delete-action{
+  text-align: center;
+  padding:100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.handle-delete-action p{
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.no-button-modal, .yes-button-modal{
+  padding: 10px 30px;
+}
+.yes-button-modal{
+  margin-right: 30px;
+  background-color: #159895;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.no-button-modal{
+  background-color: #002B5B;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.no-button-modal:hover{
+  background-color: #133b68;
+}
+.yes-button-modal:hover{
+  background-color: #348584;
+}
+.confirm-modal-icons{
+ padding-top: 15px;
 }

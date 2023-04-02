@@ -1,11 +1,29 @@
 .posts-cards{
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 60px;
 }
 .add-post-heading{
     text-align: center;
     padding-top: 10px;
     color: #002B5B;
+}
+.post-card-outer{
+    border: 2px solid #000;
+}
+.post-icons{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+}
+.delete-post-icon, .edit-post-icon{
+    height: 50px;
+    width: 50px;
+}
+.outer-container-post-card{
+    height: 372px;
 }

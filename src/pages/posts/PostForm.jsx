@@ -1,7 +1,6 @@
 import React from "react";
 import FormikContainer from "../../components/form/FormikContainer";
 import PostSchema from "../../schemas/postSchema";
-import { toast } from "react-toastify";
 import PostFields from "./PostFields";
 import { v4 as uuidv4 } from "uuid";
 
@@ -10,19 +9,22 @@ export default function PostForm({
   addPost,
   setIsModalOpen,
   userId,
+  editPostId,
+  editPost,
+  submitBtnTxt
 }) {
   const handleSubmit = (values, { resetForm }) => {
     resetForm();
-    addPost({ ...values, id: uuidv4(), userId});
+    addPost && (addPost({ ...values, id: uuidv4(), userId}));
+    editPost && (editPost({ ...values,editPostId}));
     setIsModalOpen(false);
-    toast.success("successfully submitted"); // handle form submission
   };
   return (
     <FormikContainer
       initialValues={postIntialValues}
       validationSchema={PostSchema}
       onSubmit={handleSubmit}
-      submitBtnText="Add Post"
+      submitBtnText={submitBtnTxt}
       className="add-post-form"
     >
       <PostFields />

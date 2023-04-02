@@ -20,10 +20,11 @@ function Modal({ className, children, btnText,isModalOpen,setIsModalOpen}) {
   }, [isModalOpen]);
 
   return (
-    <>
+    <>{
+      btnText!="" &&
       <button onClick={toggleModal} className={className}>
         {btnText}
-      </button>
+      </button>}
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
