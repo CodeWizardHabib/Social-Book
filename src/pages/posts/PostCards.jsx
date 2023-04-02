@@ -2,6 +2,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import Card from "../../components/ui/Card";
 import PostIcons from "./PostIcons";
+import PostComments from "./PostComments";
 export default function PostCards({ data, user, editPost, deletePost }) {
   return (
     <div className="posts-cards">
@@ -22,6 +23,7 @@ export default function PostCards({ data, user, editPost, deletePost }) {
                   deletePost={deletePost}
                 />
               )}
+              <PostComments postId={id}/>
             </div>
           );
         })}
