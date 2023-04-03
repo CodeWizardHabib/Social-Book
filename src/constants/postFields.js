@@ -1,4 +1,4 @@
-export const postFields={
-    title:"",
-    body:"",
-}
+export const postFields = {
+  title: "",
+  body: "",
+};

@@ -1,10 +1,10 @@
 import React from "react";
 import AboutItem from "./AboutItem";
 import infoIcon from "../../assets/icons8-info-50.png";
-import thumbsUp from "../../assets/icons8-thumbs-up-66.png"
-import locationIcon from "../../assets/icons8-address-50.png"
-import aboutCompanyIcon from "../../assets/icons8-organization-64.png"
-import globeIcon from "../../assets/icons8-geography-50.png"
+import thumbsUp from "../../assets/icons8-thumbs-up-66.png";
+import locationIcon from "../../assets/icons8-address-50.png";
+import aboutCompanyIcon from "../../assets/icons8-organization-64.png";
+import globeIcon from "../../assets/icons8-geography-50.png";
 import { about } from "../../constants/about";
 import "./About.css";
 export default function About() {

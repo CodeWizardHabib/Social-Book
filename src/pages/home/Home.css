@@ -1,36 +1,41 @@
-.about-section-home{
+.about-section-home {
     display: flex;
     justify-content: center;
     align-self: center;
     gap: 20px;
     padding-top: 50px;
 }
-.view-posts-card{
+
+.view-posts-card {
     height: 430px;
     width: 400px;
     border: 2px solid #000;
     border-radius: 20px;
 }
-.view-posts-card img{
+
+.view-posts-card img {
     height: 50%;
     display: block;
     margin: 0 auto;
 }
-.view-posts-card h2{
+
+.view-posts-card h2 {
     width: 60%;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px
 }
-.view-posts-card button{
-  background-color: #19376D;
-  display: block;
-  margin: 0 auto;
-  padding: 10px 30px;
-  color: #fff;
-  border: none;
+
+.view-posts-card button {
+    background-color: #19376D;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
 }
-.view-posts-card button:hover{
+
+.view-posts-card button:hover {
     background-color: #159895;
     cursor: pointer;
 }

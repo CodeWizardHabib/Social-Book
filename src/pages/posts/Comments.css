@@ -1,9 +1,10 @@
-.comment-icons-container{
+.comment-icons-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.comment-icons-container img{
+
+.comment-icons-container img {
     width: 50px;
     height: 50px;
 }

@@ -6,7 +6,10 @@ export default function CommentIcons({ comment, editComment, deleteComment }) {
   return (
     <div className="comment-icons-container">
       <CommnentEditIcon comment={comment} onEdit={editComment} />
-      <CommnentDeleteIcon commentId={comment.id} deleteComment={deleteComment} />
+      <CommnentDeleteIcon
+        commentId={comment.id}
+        deleteComment={deleteComment}
+      />
     </div>
   );
 }

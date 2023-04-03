@@ -5,11 +5,13 @@ import getComments from "../api/getComments";
 import { toast } from "react-toastify";
 const useFetchComments = (postId) => {
   const [comments, setComments] = useState([]);
+
   const addComment = (comment) => {
     const newComments = [{ ...comment }, ...comments];
     setComments([...newComments]);
     setLocalStorage(`posts${postId}`, JSON.stringify([...newComments]));
   };
+
   const editComment = (commentId, body) => {
     const index = comments.findIndex(({ id }) => id === commentId);
     if (index === -1) {
@@ -22,12 +24,14 @@ const useFetchComments = (postId) => {
     setComments([...newArray]);
     setLocalStorage(`posts${postId}`, JSON.stringify(newArray));
   };
+
   const deleteComment = (commentId) => {
     const updatedComments = comments.filter(({ id }) => id !== commentId);
     setComments([...updatedComments]);
     toast.success("Comment deleted successfully");
     setLocalStorage(`posts${postId}`, JSON.stringify(updatedComments));
   };
+
   useEffect(() => {
     const fetchComments = async () => {
       try {

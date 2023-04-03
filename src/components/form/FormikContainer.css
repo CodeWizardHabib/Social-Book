@@ -1,8 +1,9 @@
-.sign-up, .sign-in{
+.sign-up,
+.sign-in {
     text-align: center;
 }
 
-.add-post-form{
+.add-post-form {
     text-align: center;
     padding: 100px;
 }

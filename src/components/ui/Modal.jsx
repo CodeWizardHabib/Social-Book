@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Modal.css";
 
-function Modal({ className, children, btnText,isModalOpen,setIsModalOpen}) {
-
+function Modal({ className, children, btnText, isModalOpen, setIsModalOpen }) {
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
   useEffect(() => {
     const handleWindowClick = (event) => {
       if (isModalOpen && event.target.className === "modal") {
@@ -17,14 +17,15 @@ function Modal({ className, children, btnText,isModalOpen,setIsModalOpen}) {
     return () => {
       window.removeEventListener("click", handleWindowClick);
     };
-  }, [isModalOpen]);
+  }, [isModalOpen, setIsModalOpen]);
 
   return (
-    <>{
-      btnText!="" &&
-      <button onClick={toggleModal} className={className}>
-        {btnText}
-      </button>}
+    <>
+      {btnText !== "" && (
+        <button onClick={toggleModal} className={className}>
+          {btnText}
+        </button>
+      )}
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">

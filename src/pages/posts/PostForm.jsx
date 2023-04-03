@@ -11,14 +11,15 @@ export default function PostForm({
   userId,
   editPostId,
   editPost,
-  submitBtnTxt
+  submitBtnTxt,
 }) {
   const handleSubmit = (values, { resetForm }) => {
     resetForm();
-    addPost && (addPost({ ...values, id: uuidv4(), userId}));
-    editPost && (editPost({ ...values,editPostId}));
+    addPost && addPost({ ...values, id: uuidv4(), userId });
+    editPost && editPost({ ...values, editPostId });
     setIsModalOpen(false);
   };
+
   return (
     <FormikContainer
       initialValues={postIntialValues}

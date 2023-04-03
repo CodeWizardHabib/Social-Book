@@ -1,15 +1,14 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import DropDownButton from "../../components/ui/DropDownButton";
 import { userContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 export default function NavBarDropDown() {
-
   const { user, setUser } = useContext(userContext);
-  const logout=()=>{
-    toast.success('user logged out');
+  const logout = () => {
+    toast.success("user logged out");
     setUser("");
-  }
+  };
   return (
     <DropDownButton btnText="User">
       {!user && (
@@ -22,7 +21,11 @@ export default function NavBarDropDown() {
           </h2>
         </>
       )}
-      {user && <h2 className="logout" onClick={logout}>Logout</h2>}
+      {user && (
+        <h2 className="logout" onClick={logout}>
+          Logout
+        </h2>
+      )}
     </DropDownButton>
   );
 }

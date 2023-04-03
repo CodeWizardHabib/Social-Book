@@ -3,20 +3,22 @@ import deleteIcon from "../../assets/remove.png";
 import Modal from "../../components/ui/Modal";
 export default function PostDeleteIcon({
   onDeletePost,
-  postDetails: { editPostId: deletePostId},
+  postDetails: { editPostId: deletePostId },
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const deletePost = () => {
     onDeletePost(deletePostId);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
-    // onDeletePost(deletePostId);
   };
+
   const handleClick = () => {
     setIsModalOpen(true);
-    // onDeletePost(deletePostId);
   };
+
   return (
     <>
       <img

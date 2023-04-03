@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import addCommentIcon from "../../assets/icons8-comments-64.png";
-import {toast} from "react-toastify"
+import { toast } from "react-toastify";
 import { v4 as uuid4 } from "uuid";
-export default function AddCommentForm({user:{name,email},addComment,postId}) {
+export default function AddCommentForm({
+  user: { name, email },
+  addComment,
+  postId,
+}) {
   const [commentValue, setCommentValue] = useState("");
 
   const handleInputChange = (event) => {
@@ -11,16 +15,24 @@ export default function AddCommentForm({user:{name,email},addComment,postId}) {
       setCommentValue(value);
     }
   };
+
   const handleSubmit = () => {
-    if(commentValue.trim()===""){
-        toast.warn("Comment can not be empty");
-        return;
+    if (commentValue.trim() === "") {
+      toast.warn("Comment can not be empty");
+      return;
     }
-    addComment({postId,id:uuid4(),name,email,body:commentValue.trim()})
+    addComment({ postId, id: uuid4(), name, email, body: commentValue.trim() });
     toast.success("Comment added successfully");
     setCommentValue("");
-
   };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleSubmit();
+    }
+  };
+
   return (
     <div className="add-commnet-outer-container">
       <input
@@ -31,6 +43,7 @@ export default function AddCommentForm({user:{name,email},addComment,postId}) {
         onChange={handleInputChange}
         maxLength={300}
         placeholder="Add a comment"
+        onKeyPress={handleKeyPress}
       />
       <div onClick={handleSubmit}>
         <img src={addCommentIcon} alt="add comment" />

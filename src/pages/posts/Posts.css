@@ -41,7 +41,8 @@
 .post-comment {
     margin-left: 10px;
 }
-.post-page{
+
+.post-page {
     background-color: #DAF5FF;
     display: flex;
     justify-content: center;
@@ -49,7 +50,7 @@
 }
 
 
-.show-comments-toggle{
+.show-comments-toggle {
     background-color: #159895;
     color: #fff;
     padding: 5px 10px;
@@ -59,13 +60,14 @@
     cursor: pointer;
     margin-bottom: 12px;
 }
-.add-commnet-outer-container{
+
+.add-commnet-outer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.add-commnet-outer-container input{
+.add-commnet-outer-container input {
     width: 95%;
     padding: 15px 0;
     padding-left: 20px;

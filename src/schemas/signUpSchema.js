@@ -16,4 +16,4 @@ const SignupSchema = Yup.object().shape({
       "Password must contain at least one letter and one number"
     ),
 });
-export default SignupSchema
+export default SignupSchema;
