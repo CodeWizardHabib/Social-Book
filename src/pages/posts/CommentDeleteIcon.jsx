@@ -1,22 +1,28 @@
 import React, { useState } from "react";
 import deleteCommentIcon from "../../assets/icons8-delete-30.png";
 import Modal from "../../components/ui/Modal";
-export default function CommnentDeleteIcon({commentId,deleteComment}) {
+export default function CommnentDeleteIcon({ commentId, deleteComment }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const closeModal = () => {
     setIsModalOpen(false);
-    // onDeletePost(deletePostId);
   };
-  const handleDelete=()=>{
+
+  const handleDelete = () => {
     deleteComment(commentId);
-  }
+  };
+
   const handleClick = () => {
     setIsModalOpen(true);
-    // onDeletePost(deletePostId);
   };
+
   return (
     <>
-      <img  onClick={handleClick} src={deleteCommentIcon} alt="delete-icon-commnent" />
+      <img
+        onClick={handleClick}
+        src={deleteCommentIcon}
+        alt="delete-icon-commnent"
+      />
       <Modal
         btnText=""
         isModalOpen={isModalOpen}

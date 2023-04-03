@@ -1,7 +1,9 @@
-import React from 'react'
-import './SubmitButton.css'
-export default function SubmitButton({text,submitText}) {
+import React from "react";
+import "./SubmitButton.css";
+export default function SubmitButton({ submitText }) {
   return (
-    <button className="submit-button"  type='submit'>{submitText}</button>
-  )
+    <button className="submit-button" type="submit">
+      {submitText}
+    </button>
+  );
 }

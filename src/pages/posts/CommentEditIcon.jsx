@@ -3,18 +3,22 @@ import editCommentIcon from "../../assets/icons8-edit-comment-53.png";
 import Modal from "../../components/ui/Modal";
 export default function CommnentEditIcon({ comment, onEdit }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [formBody, setFormBody] = useState("");
   const handleClick = () => {
     setIsModalOpen(true);
   };
+
   useEffect(() => {
     setFormBody(comment.body);
   }, [comment]);
+
   const onFormSubmit = () => {
-    onEdit(comment.id, formBody );
+    onEdit(comment.id, formBody);
     setIsModalOpen(false);
-    setFormBody("")
+    setFormBody("");
   }; //
+
   const updateFormBody = (event) => {
     const body = event.target.value;
     setFormBody(body);

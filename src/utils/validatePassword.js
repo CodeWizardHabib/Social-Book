@@ -1,4 +1,4 @@
-const validatePassword = ( userPassword, enteredPassword ) => {
-  return (userPassword === enteredPassword);
+const validatePassword = (userPassword, enteredPassword) => {
+  return userPassword === enteredPassword;
 };
 export default validatePassword;

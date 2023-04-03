@@ -3,13 +3,15 @@ import editIcon from "../../assets/edit-icon.png";
 import Modal from "../../components/ui/Modal";
 import PostForm from "./PostForm";
 export default function PostEditIcon({
-  postDetails: { title, body, editPostId},
+  postDetails: { title, body, editPostId },
   editPost,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleClick = () => {
     setIsModalOpen(true);
   };
+
   return (
     <>
       <img

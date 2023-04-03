@@ -6,19 +6,20 @@ import setLocalStorage from "../utils/setToLocalStorage";
 function usePostsGet() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+
   const addPost = (post) => {
     setData([{ ...post }, ...data]);
     toast.success("post added successfully");
     setLocalStorage("posts", JSON.stringify([{ ...post }, ...data]));
-
   };
+
   const deletePost = (deletePostId) => {
     const updatedPosts = data.filter((post) => post.id !== deletePostId);
     setData([...updatedPosts]);
     toast.success("post deleted successfully");
     setLocalStorage("posts", JSON.stringify(updatedPosts));
-
   };
+
   const editPost = ({ title, body, editPostId }) => {
     const index = data.findIndex(({ id }) => id === editPostId);
     if (index === -1) {
@@ -31,8 +32,8 @@ function usePostsGet() {
 
     setData([...newArray]);
     setLocalStorage("posts", JSON.stringify(newArray));
-
   };
+
   useEffect(() => {
     const getPosts = async () => {
       try {

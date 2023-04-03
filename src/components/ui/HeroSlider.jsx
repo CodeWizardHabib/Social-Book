@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./HeroSlider.css";
 import heroFirstImage from "../../assets/3255395.jpg";
-import heroSecondImage from "../../assets/59335.jpg"
+import heroSecondImage from "../../assets/59335.jpg";
 const images = [heroFirstImage, heroSecondImage];
 
 const HeroSlider = () => {
@@ -13,7 +13,7 @@ const HeroSlider = () => {
     dots: false,
     slidesToShow: 1,
     infinite: true,
-    autoplaySpeed:3000,
+    autoplaySpeed: 3000,
     speed: 5,
     fade: true,
     cssEase: "linear",

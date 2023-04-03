@@ -11,6 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 export default function SignUpForm() {
   const navigate = useNavigate();
+
   const handleSubmit = (values, { resetForm }) => {
     const users = JSON.parse(getLocalStorage("users"));
     if (users) {
@@ -33,6 +34,7 @@ export default function SignUpForm() {
     resetForm();
     // handle form submission
   };
+
   return (
     <FormikContainer
       initialValues={userInputDetails}

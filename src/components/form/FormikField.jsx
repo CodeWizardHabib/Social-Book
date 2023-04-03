@@ -1,7 +1,14 @@
 import React from "react";
 import { Field } from "formik";
 import "./FormikField.css";
-export default function FormikField({ type, name, placeholder, className ,errors, touched}) {
+export default function FormikField({
+  type,
+  name,
+  placeholder,
+  className,
+  errors,
+  touched,
+}) {
   return (
     <>
       <Field

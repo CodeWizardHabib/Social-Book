@@ -1,15 +1,14 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import SubmitButton from "../ui/SubmitButton";
-import './FormikContainer.css';
+import "./FormikContainer.css";
 const FormikContainer = ({
   initialValues,
   validationSchema,
   onSubmit,
   children,
   submitBtnText,
-  className
-
+  className,
 }) => {
   return (
     <Formik
@@ -20,7 +19,7 @@ const FormikContainer = ({
       validateOnBlur={true}
     >
       {({ errors, touched }) => (
-        <Form className={className  }>
+        <Form className={className}>
           {React.Children.map(children, (child) => (
             <div>
               {React.cloneElement(child, { errors, touched })}
@@ -30,7 +29,7 @@ const FormikContainer = ({
               )}
             </div>
           ))}
-         <SubmitButton submitText={submitBtnText}/>
+          <SubmitButton submitText={submitBtnText} />
         </Form>
       )}
     </Formik>

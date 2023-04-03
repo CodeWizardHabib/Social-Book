@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import FormikContainer from "../../components/form/FormikContainer";
 import { userSignInFields } from "../../constants/user";
 import SignInSchema from "../../schemas/signInSchema";
@@ -10,8 +10,8 @@ import validUser from "../../middlewares/validUser";
 import { userContext } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 export default function SignInForm() {
-  const navigate=useNavigate();
-    
+  const navigate = useNavigate();
+
   const { setUser } = useContext(userContext);
 
   const handleSubmit = (values, { resetForm }) => {
@@ -22,15 +22,16 @@ export default function SignInForm() {
         toast.error("Invalid credentials");
         return;
       }
-      setUser(user)
+      setUser(user);
       toast.success("signed in");
-      navigate("/posts")
+      navigate("/posts");
     } else {
       toast.warn("Please First Signed Up!");
     }
     resetForm();
     // handle form submission
   };
+
   return (
     <FormikContainer
       initialValues={userSignInFields}

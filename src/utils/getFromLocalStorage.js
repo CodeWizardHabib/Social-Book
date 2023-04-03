@@ -1,4 +1,4 @@
-const getLocalStorage=(key)=>{
-    return (localStorage.getItem(key)) ;
-}
+const getLocalStorage = (key) => {
+  return localStorage.getItem(key);
+};
 export default getLocalStorage;

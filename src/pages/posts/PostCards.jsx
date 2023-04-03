@@ -9,8 +9,8 @@ export default function PostCards({ data, user, editPost, deletePost }) {
       {data &&
         data.map(({ title, body, id, userId }) => {
           return (
-            <div className="outer-container-post-card">
-              <Card key={uuidv4()} title={title} body={body} />
+            <div className="outer-container-post-card" key={uuidv4()}>
+              <Card title={title} body={body} />
               {user.userId === userId && (
                 <PostIcons
                   postDetails={{
@@ -23,7 +23,7 @@ export default function PostCards({ data, user, editPost, deletePost }) {
                   deletePost={deletePost}
                 />
               )}
-              <PostComments postId={id} user={user}/>
+              <PostComments postId={id} user={user} />
             </div>
           );
         })}

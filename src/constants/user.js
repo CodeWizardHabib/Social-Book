@@ -1,8 +1,9 @@
-export const userInputDetails={
-     name:"",
-     email:"",
-     password:"",
-}
-export const userSignInFields={
-    email:"",
-    password:""}
+export const userInputDetails = {
+  name: "",
+  email: "",
+  password: "",
+};
+export const userSignInFields = {
+  email: "",
+  password: "",
+};
