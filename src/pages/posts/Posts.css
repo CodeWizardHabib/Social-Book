@@ -1,0 +1,76 @@
+.posts-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    flex-direction: column;
+}
+
+.add-post-heading {
+    text-align: center;
+    padding-top: 10px;
+    color: #002B5B;
+}
+
+.post-card-outer {
+    border: 2px solid #000;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+}
+
+.delete-post-icon,
+.edit-post-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.outer-container-post-card {
+    background-color: #fff;
+    margin-bottom: 30px;
+    width: 600px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.post-comment {
+    margin-left: 10px;
+}
+.post-page{
+    background-color: #DAF5FF;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+
+.show-comments-toggle{
+    background-color: #159895;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+.add-commnet-outer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-commnet-outer-container input{
+    width: 95%;
+    padding: 15px 0;
+    padding-left: 20px;
+    font-style: italic;
+    border-radius: 24px;
+    flex: 1;
+
+}

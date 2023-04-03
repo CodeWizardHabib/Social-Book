@@ -1,0 +1,111 @@
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    display: block;
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: darkred;
+  }
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #159895;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.floating-button:hover {
+    background-color: #002B5B;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.7);
+}
+.handle-delete-action{
+  text-align: center;
+  padding:100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.handle-delete-action p{
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.no-button-modal, .yes-button-modal{
+  padding: 10px 30px;
+}
+.yes-button-modal{
+  margin-right: 30px;
+  background-color: #159895;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.no-button-modal{
+  background-color: #002B5B;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.no-button-modal:hover{
+  background-color: #133b68;
+}
+.yes-button-modal:hover,.edit-comment-btn:hover{
+  background-color: #348584;
+}
+.confirm-modal-icons{
+ padding-top: 15px;
+}
+.edit-comment-heading{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.edit-comment-input{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.edit-comment-btn{
+  padding: 10px 30px;
+  display: block;
+  margin: 0 auto;
+  background-color: #133b68;
+  color: #fff;
+  border: none;
+}

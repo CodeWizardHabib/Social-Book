@@ -1,0 +1,35 @@
+nav{
+    background-color: #159895;
+}
+.nav-bar-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 130px;
+    gap: 12px;
+
+}
+.nav-bar-links a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-bar-links a:hover, .logout:hover{
+    color: #002B5B;
+}
+.logo-img{
+    flex: 1;
+    padding-left: 60px;
+}
+.logo{
+    height: 100px;
+}
+.nav-bar{
+    justify-content: space-between;
+    align-items: center;
+}
+.logout{
+    padding: 20px;
+}
+.logout:hover{
+    cursor: pointer;
+}
